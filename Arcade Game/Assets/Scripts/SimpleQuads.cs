@@ -44,5 +44,11 @@ public class SimpleQuads : MonoBehaviour {
             state = Random.Range(1, 3);
             Debug.Log(state);
         }
+
+        if (collision.transform.tag == "Lose")
+        {
+            
+            Debug.Log("Lose");
+        }
     }
 }
