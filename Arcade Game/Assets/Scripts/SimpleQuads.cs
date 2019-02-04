@@ -10,11 +10,11 @@ public class SimpleQuads : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    }
+
+    // Update is called once per frame
+    void Update () {
 
         rebound_velocity_quads = velocity_quads + 0.2F;
 
