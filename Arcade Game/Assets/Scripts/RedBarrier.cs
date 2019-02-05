@@ -20,7 +20,7 @@ public class RedBarrier : MonoBehaviour {
     {
         my_object.transform.position = Camera.main.ScreenToWorldPoint(new Vector3(my_object.transform.position.x + offset_x, Input.mousePosition.y, 10));
 
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             Debug.Log("Changing Barrier Color");
             active_barrier = !active_barrier;
