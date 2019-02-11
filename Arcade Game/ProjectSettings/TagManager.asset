@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Hit
   - Lose
+  - White_Barrier
+  - Red_Barrier
   layers:
   - Default
   - TransparentFX

@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class WhiteQuads : MonoBehaviour {
 
-    public float velocity_quads = 0.4F;
+    float velocity_quads;
     float rebound_velocity_quads;
     private int state = 0;
 
     // Use this for initialization
     void Start () {
+        velocity_quads = transform.GetComponentInParent<Quads>().velocity;
 
     }
 
