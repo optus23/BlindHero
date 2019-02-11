@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class SimpleQuads : MonoBehaviour {
+public class WhiteQuads : MonoBehaviour {
 
     public float velocity_quads = 0.4F;
     float rebound_velocity_quads;
@@ -39,7 +40,7 @@ public class SimpleQuads : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.transform.tag == "Hit")
+        if(collision.transform.tag == "White_Barrier")
         {
             state = Random.Range(1, 3);
             Debug.Log(state);
@@ -47,7 +48,7 @@ public class SimpleQuads : MonoBehaviour {
 
         if (collision.transform.tag == "Lose")
         {
-            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             Debug.Log("Lose");
         }
     }
