@@ -8,6 +8,9 @@ TagManager:
   - Lose
   - White_Barrier
   - Red_Barrier
+  - Triangle_Stop
+  - TriangleDown
+  - TriangleUp
   layers:
   - Default
   - TransparentFX

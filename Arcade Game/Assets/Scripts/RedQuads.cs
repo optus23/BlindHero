@@ -54,5 +54,10 @@ public class RedQuads : MonoBehaviour {
 
             Debug.Log("Lose");
         }
+
+        if (collision.transform.tag == "Finish")
+        {
+            Destroy(gameObject);
+        }
     }
 }

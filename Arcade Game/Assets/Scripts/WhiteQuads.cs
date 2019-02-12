@@ -52,5 +52,10 @@ public class WhiteQuads : MonoBehaviour {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
             Debug.Log("Lose");
         }
+
+        if (collision.transform.tag == "Finish")
+        {
+            Destroy(gameObject);
+        }
     }
 }
