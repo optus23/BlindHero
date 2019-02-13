@@ -9,7 +9,6 @@ public class RedTriangles : MonoBehaviour
     float velocity_triangles;
     float rebound_velocity_triangles;
     int state = 0;
-    int rotation = 0;
 
     // Use this for initialization
     void Start()
