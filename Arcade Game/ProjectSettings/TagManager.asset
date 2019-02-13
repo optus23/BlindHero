@@ -12,6 +12,7 @@ TagManager:
   - TriangleDown
   - TriangleUp
   - level1_End
+  - Lose_Endless
   layers:
   - Default
   - TransparentFX

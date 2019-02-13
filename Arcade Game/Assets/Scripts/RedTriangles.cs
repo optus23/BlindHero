@@ -73,6 +73,11 @@ public class RedTriangles : MonoBehaviour
             Debug.Log("Lose");
         }
 
+        if (collision.transform.tag == "Lose_Endless")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 2);
+            Debug.Log("Lose");
+        }
         if (collision.transform.tag == "Finish")
         {
             Destroy(gameObject);

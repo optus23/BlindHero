@@ -1241,7 +1241,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 134149479}
-        m_MethodName: PlayGame
+        m_MethodName: PlayEndless
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
