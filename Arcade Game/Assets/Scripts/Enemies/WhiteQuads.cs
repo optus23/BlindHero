@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class WhiteQuads : MonoBehaviour {
 
-    float velocity_quads;
+    float velocity_quads = 0.25f;
     float rebound_velocity_quads;
     private int state = 0;
 
+    public GameObject enemy_particle;
     // Use this for initialization
     void Start () {
-        velocity_quads = transform.GetComponentInParent<Quads>().velocity;
 
     }
 
@@ -44,7 +44,7 @@ public class WhiteQuads : MonoBehaviour {
         if(collision.transform.tag == "White_Barrier")
         {
             state = Random.Range(1, 3);
-            Debug.Log(state);
+            Instantiate(enemy_particle, transform.position, Quaternion.identity);
         }
 
         if (collision.transform.tag == "Lose")

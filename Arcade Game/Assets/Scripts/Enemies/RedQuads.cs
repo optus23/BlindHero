@@ -5,14 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class RedQuads : MonoBehaviour {
 
-    float velocity_quads;
+    float velocity_quads = 0.25f;
     float rebound_velocity_quads;
     private int state = 0;
 
     // Use this for initialization
     void Start()
     {
-        velocity_quads = transform.GetComponentInParent<Quads>().velocity;
     }
 
     // Update is called once per frame
@@ -45,7 +44,6 @@ public class RedQuads : MonoBehaviour {
         if (collision.transform.tag == "Red_Barrier")
         {
             state = Random.Range(1, 3);
-            Debug.Log(state);
         }
 
         if (collision.transform.tag == "Lose")

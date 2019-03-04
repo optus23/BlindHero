@@ -6,14 +6,13 @@ using UnityEngine.SceneManagement;
 public class RedTriangles : MonoBehaviour
 {
 
-    float velocity_triangles;
+    float velocity_triangles = 0.25f;
     float rebound_velocity_triangles;
     int state = 0;
 
     // Use this for initialization
     void Start()
     {
-        velocity_triangles = transform.GetComponentInParent<Triangles>().velocity;
 
     }
 
@@ -58,7 +57,6 @@ public class RedTriangles : MonoBehaviour
         if (collision.transform.tag == "Red_Barrier")
         {
             state = Random.Range(1, 3);
-            Debug.Log(state);
         }
 
         if (collision.transform.tag == "Triangle_Stop")
