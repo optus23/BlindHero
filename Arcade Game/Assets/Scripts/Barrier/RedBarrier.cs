@@ -9,10 +9,13 @@ public class RedBarrier : MonoBehaviour {
     public GameObject my_object;
     public bool active_barrier = false;
 
+    public AudioClip Sfx_ChangeBarrier;
+    public AudioSource Sfx_ChangeBarrier_Source;
+
     // Use this for initialization
     void Start()
     {
-
+        Sfx_ChangeBarrier_Source.clip = Sfx_ChangeBarrier;
     }
 
     // Update is called once per frame
@@ -24,6 +27,7 @@ public class RedBarrier : MonoBehaviour {
         {
             Debug.Log("Changing Barrier Color");
             active_barrier = !active_barrier;
+            Sfx_ChangeBarrier_Source.Play();
         }
 
         if (active_barrier)

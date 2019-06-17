@@ -9,9 +9,12 @@ public class RedQuads : MonoBehaviour {
     float rebound_velocity_quads;
     private int state = 0;
 
+    public AudioClip Sfx_ImpactBarrier;
+    public AudioSource Sfx_ImpactBarrier_Source;
     // Use this for initialization
     void Start()
     {
+        Sfx_ImpactBarrier_Source.clip = Sfx_ImpactBarrier;
     }
 
     // Update is called once per frame
@@ -44,6 +47,7 @@ public class RedQuads : MonoBehaviour {
         if (collision.transform.tag == "Red_Barrier")
         {
             state = Random.Range(1, 3);
+            Sfx_ImpactBarrier_Source.Play();
         }
 
         if (collision.transform.tag == "Lose")
@@ -63,5 +67,6 @@ public class RedQuads : MonoBehaviour {
         {
             Destroy(gameObject);
         }
+
     }
 }
